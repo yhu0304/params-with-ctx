@@ -7,7 +7,7 @@ import (
 
 func main() {
 	svc := options.NewService()
-	cfg := svc.DefaultViewConfigCreater()()
+	cfg := svc.DefaultDemoConfigCreater()()
 	opts := []options.Option{
 		options.DemoInt(27),
 	}

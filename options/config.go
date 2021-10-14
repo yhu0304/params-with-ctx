@@ -60,7 +60,7 @@ func NewService() *Service {
 	return &Service{}
 }
 
-func (s *Service) DefaultViewConfigCreater() createFunc {
+func (s *Service) DefaultDemoConfigCreater() createFunc {
 	return func() demoConfig {
 		return demoConfig{
 			// default val
@@ -69,7 +69,7 @@ func (s *Service) DefaultViewConfigCreater() createFunc {
 	}
 }
 func (s *Service) Demo(ctx context.Context) {
-	cfg := FromContextOrCreate(ctx, s.DefaultViewConfigCreater())
+	cfg := FromContextOrCreate(ctx, s.DefaultDemoConfigCreater())
 	// print: {27 false hello}
 	fmt.Println(cfg)
 }
